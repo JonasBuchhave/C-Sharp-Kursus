@@ -15,6 +15,7 @@ namespace _10tabel
                 for (int j = 1; j < 21; j++)
                 {
                     int tal = i * j;
+                    if (tal >= 25) Console.ForegroundColor = ConsoleColor.DarkGreen;
                     if (tal >= 50) Console.ForegroundColor = ConsoleColor.Yellow;
                     if (tal >= 100) Console.ForegroundColor = ConsoleColor.Green;
                     if (tal >= 150) Console.ForegroundColor = ConsoleColor.Magenta;
@@ -24,7 +25,7 @@ namespace _10tabel
                     if (tal >= 350) Console.ForegroundColor = ConsoleColor.Gray;
 
                     Console.Write(tal.ToString().PadLeft(4));
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 Console.WriteLine();
             }
