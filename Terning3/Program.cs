@@ -17,7 +17,7 @@ namespace Terning3
             Console.WriteLine();
 
             int count = 0;
-            while (b.Yatzy() == false)
+            while (b.FireEns() == false)
             {
                 b.Ryst();
                 count++;

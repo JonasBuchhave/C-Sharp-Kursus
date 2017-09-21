@@ -20,14 +20,45 @@ namespace Terning3
 
         public bool Yatzy()
         {
-            if (terninger[0].Værdi == terninger[1].Værdi &&
-                terninger[1].Værdi == terninger[2].Værdi &&
-                terninger[2].Værdi == terninger[3].Værdi &&
-                terninger[3].Værdi == terninger[4].Værdi)
-                return true;
-            else
-                return false;
+            for (int i = 1; i < 7; i++)
+            {
+                if (Antal(i) == terninger.Length)
+                    return true;
+            }
+            return false;
         }
+
+        public bool FireEns()
+        {
+            for (int i = 1; i < 7; i++)
+            {
+                if (Antal(i) >= 4)
+                    return true;
+            }
+            return false;
+        }
+
+        public bool TreEns()
+        {
+            for (int i = 1; i < 7; i++)
+            {
+                if (Antal(i) >= 3)
+                    return true;
+            }
+            return false;
+        }
+
+        public int Antal(int værdi)
+        {
+            int tæller = 0;
+            foreach (var item in terninger)
+            {
+                if (item.Værdi == værdi)
+                    tæller++;
+            }
+            return tæller;
+        }
+
 
         public void Skriv()
         {
