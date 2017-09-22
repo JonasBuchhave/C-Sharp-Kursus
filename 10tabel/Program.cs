@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//https://github.com/devcronberg/cs201708aa
+
 namespace _10tabel
 {
     class Program
